@@ -11,7 +11,6 @@ import {
 } from 'discord-api-types/v10';
 import { cpus, uptime, type CpuInfo } from 'node:os';
 import { LanguageKeys } from '../lib/i18n/LanguageKeys.js';
-import { getInvite, getRepository } from '../lib/information.js';
 
 const Root = LanguageKeys.Commands.Info;
 
@@ -54,13 +53,10 @@ export class SharedCommand extends Command {
 	}
 
 	private getComponents(t: TFunction) {
-		const url = getInvite();
 		const support = this.getSupportComponent(t);
 		const github = this.getGitHubComponent(t);
 		const donate = this.getDonateComponent(t);
-		const data = url
-			? [this.getActionRow(support, this.getInviteComponent(t, url)), this.getActionRow(github, donate)]
-			: [this.getActionRow(support, github, donate)];
+		const data = [this.getActionRow(support, github, donate)];
 
 		return data;
 	}
@@ -79,23 +75,13 @@ export class SharedCommand extends Command {
 		};
 	}
 
-	private getInviteComponent(t: TFunction, url: string): APIMessageActionRowComponent {
-		return {
-			type: ComponentType.Button,
-			style: ButtonStyle.Link,
-			label: t(Root.ButtonInvite),
-			emoji: { name: '🎉' },
-			url
-		};
-	}
-
 	private getGitHubComponent(t: TFunction): APIMessageActionRowComponent {
 		return {
 			type: ComponentType.Button,
 			style: ButtonStyle.Link,
 			label: t(Root.ButtonGitHub),
 			emoji: { id: '1229375525827645590', name: 'github2' },
-			url: getRepository()
+			url: 'https://github.com/BirthdayyBot'
 		};
 	}
 
