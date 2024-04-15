@@ -1,0 +1,13 @@
+{
+	"name": "info",
+	"description": "Provides information about me, and links for adding the bot and joining the support server",
+	"embedDescription": "Birthdayy Support is a private bot that manages the operation limits of the Birthdayy-Bot. This is an HTTP only bot built on top of [Skyra HTTP Framework](https://www.npmjs.com/package/@skyra/http-framework).",
+	"fieldUptimeTitle": "Uptime",
+	"fieldUptimeValue": "• **Host**: {{host}}\n• **Client**: {{client}}",
+	"fieldServerUsageTitle": "Server Usage",
+	"fieldServerUsageValue": "• **CPU Usage**: {{cpu}}\n• **Memory**: {{heapUsed}}MB (Total: {{heapTotal}}MB)",
+	"buttonInvite": "Add me to your server!",
+	"buttonSupport": "Support server",
+	"buttonGitHub": "GitHub Repository",
+	"buttonDonate": "Donate"
+}
