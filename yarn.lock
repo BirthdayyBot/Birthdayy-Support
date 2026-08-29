@@ -58,7 +58,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^19.1.0"
     "@discordjs/builders": "npm:^1.7.0"
     "@discordjs/collection": "npm:^2.0.0"
-    "@prisma/client": "npm:^5.12.1"
+    "@prisma/client": "npm:^7.10.0"
     "@sapphire/eslint-config": "npm:^5.0.4"
     "@sapphire/prettier-config": "npm:^2.0.0"
     "@sapphire/result": "npm:^2.6.6"
@@ -487,15 +487,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prisma/client@npm:^5.12.1":
-  version: 5.12.1
-  resolution: "@prisma/client@npm:5.12.1"
+"@prisma/client-runtime-utils@npm:7.10.0":
+  version: 7.10.0
+  resolution: "@prisma/client-runtime-utils@npm:7.10.0"
+  checksum: 10/f802d31e0b4bcc563a78a5fe5e5577018e0ce97a18f1846654a0505a536e80e2641a5e3cfa260ee00a2bcfe12430e0a26cbcbe2f4082434e7e0bb794251fb05f
+  languageName: node
+  linkType: hard
+
+"@prisma/client@npm:^7.10.0":
+  version: 7.10.0
+  resolution: "@prisma/client@npm:7.10.0"
+  dependencies:
+    "@prisma/client-runtime-utils": "npm:7.10.0"
   peerDependencies:
     prisma: "*"
+    typescript: ">=5.4.0"
   peerDependenciesMeta:
     prisma:
       optional: true
-  checksum: 10/650a40d17ddf84bcff2390bb867da38bf253a988e19a86627040344095aca60bf8d81cdcb43096a78b3995c604ad124e20d329ff33646e1ae8fc6f6692817e5e
+    typescript:
+      optional: true
+  checksum: 10/9dae91743d5948340ad990ed49531cabfad694870e1668f9ca16415ab9d68462dbb6e1640fbbdeb1877b066dff63d4f86aa1089df0787976014d42ff31d06c4e
   languageName: node
   linkType: hard
 
