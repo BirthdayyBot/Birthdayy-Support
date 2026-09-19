@@ -37,7 +37,7 @@
 		"@skyra/shared-http-pieces": "^1.2.2",
 		"@skyra/start-banner": "^2.0.1",
 		"discord-api-types": "^0.37.79",
-		"fastify": "^4.26.2",
+		"fastify": "^5.0.0",
 		"gradient-string": "^2.0.2",
 		"tslib": "^2.6.2"
 	},
